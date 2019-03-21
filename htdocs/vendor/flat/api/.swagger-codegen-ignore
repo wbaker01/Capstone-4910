@@ -1,0 +1,5 @@
+# Swagger Codegen Ignore
+.gitignore
+.travis.yml
+composer.json
+git_push.sh

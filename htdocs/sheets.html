@@ -1,0 +1,23 @@
+<?php
+//remove <script></script> and add php start and close tag
+//comment these two lines when code started working fine
+error_reporting(E_ALL);
+ini_set('display_errors',1);
+
+$filename = 'song_list.txt';
+$eachlines = file($filename, FILE_IGNORE_NEW_LINES);
+
+?>
+<html>
+<body>
+    <div id="page-wrap">
+        <h1>Pulls from text files</h1>
+        <select id="value">
+            <option selected value="base">Please Select</option>
+           <?php foreach($eachlines as $lines){ //add php code here
+                echo "<option value='".$lines."'>$lines</option>";
+            }?>
+        </select>
+    </div>
+</body>
+</html>
